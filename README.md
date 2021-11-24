@@ -186,7 +186,33 @@ Pro Tip: Retrieving contents can be done in your pipelines by creating something
 1.9 Identification of relevant metadata: Metadata Tab
 1.10 Delta SBOM analysis between builds : Changelog Tab
 ```
+## Inspection
 
+Now that you have cataloged an SBOM, Anchore has completed the vulnerability analysis against that SBOM. It's time to inspect that image to find out what in that image is damaging or potentially harmful to your org.
+
+1) Go to the Vulnerabilities Tab
+2) Explore
+3) What is that "view report" button? Explore relationships between vulnerability data. 
+4) Identify the CVE with Fixes that YOU can make. Filter on CVE's NOT inherited by base image.
+5) Which CVE's are coming from your base image? 
+6) Do you have malware in this image?  Inspect the Contents tab under malware to identify if your image is free of malware. Combine with 1.10 of Visibility to identify where malware was introduced. 
+7) Do you have secrets detected in the image? Use the "Secret Search" tab within "Contents"
+8) Any license abuse? Go to the Policy Enforcement tab to detect anything violating policy. Or, quickly query for that license in the Contents tab.
+9) Check Build history to inspect misconfiguration in dockerfiles. You can also inspect dockerfile misconfiguration in policy enforcement tab
+
+### Insepction Cheat Sheet
+
+```
+2.1 Inspect Files for malicious content
+2.2 Inspect packages for malicious content
+2.3 Inspect packages for known CVEs
+2.4 Inspect for license abuse/misuse
+2.5 Inspect for secret abuse/misuse
+2.6 Inspect & Monitor file permissions 
+2.7 Inspect for misconfiguration in the Dockerfiles
+2.8 Inspect for vulns inherited by base images
+2.9 Inspect for malware between each build
+```
 
 
 
