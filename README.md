@@ -213,6 +213,73 @@ Now that you have cataloged an SBOM, Anchore has completed the vulnerability ana
 2.8 Inspect for vulns inherited by base images
 2.9 Inspect for malware between each build
 ```
+## Policy Enforcement
+
+1) Go to Policy Bundles Tab to see sample policies
+2) Pause. Wait for Guidance from Instructor
+3) Try creating a sample policy that triggers a "Warning Action" on all CVE's greater than "High"
+4) Create a sample policy that triggers a "Stop Action" on all images built with a root user
+5) Create a trigger that warns on no healthcheck in the dockerfile
+6) Create a custom check and be prepared to share with the group. 
+7) Diagnose which policy failures are derived from your base image
+8) Why would policy enforcement be important? 
+9) Group discussion
+
+### Policy Enforcement Cheat Sheet
+
+```
+3.1 Identify  & Enforce  your compliance baselines early
+3.2 Create a policy that doesn’t cripple velocity
+3.3 Enforce control of license abuse/misuse via Policy
+3.4 Enforce Secret + Password  Monitoring in Policy
+3.5 Only pull from authorized registries
+3.6 Enforce building from approved images
+3.7 Detect & Block misconfigurations in dockerfiles
+3.8 Policy blocks unauthorized images reaching prod 
+3.9 Don’t pass builds that violate CVE thresholds
+
+```
+
+## Remediation 
+
+1) Your developers need to know what the hell they did wrong. Let's tell them.
+2) Go to Policy Compliance Tab so you can see all of the compliance failures and rules that failed your analysis. It is good to use an image with a lot of failures for this.
+3) Click on a failed Trigger and select "show remediation actions"
+4) Select a remediation action
+5) Select Add to workbench
+6) Repeat
+7) Typically, you would have a integration for the action plan.
+8) Validate the action plan items are sent to the appropriate notification service
+
+### Remediation Cheat Sheet
+```
+4.1 Provide remediations steps for bad Dockerfiles
+4.2 Automate the flow of CVE fix information to developers
+4.3 Provide ownership who owns the fix (upstream or us)
+4.4 Integrate remediation to your notification & build service
+4.5 Enforce building from approved images
+```
+## Reporting
+
+1) Go To Reports Tab
+2) Open up the templates tab and explore
+3) Explore
+
+
+### Reporting Cheat Sheet
+```
+5.1 Provide timely reports
+5.2 Include reports that have accurate temporal data
+5.3 Reports should have relational context
+5.4 Reporting should be 100% automated
+5.5 Reports should be accurate
+5.6 Reports should reference impacted artifacts 
+```
+
+
+
+
+
 
 
 
